@@ -17,13 +17,31 @@ let remainCount = 4;
 
 button.addEventListener('click', () => {
     //convert guess to number
-        console.log(input.value);
+    console.log(input.value);
+    const userGuess = Number(input.value);
     //compare guess with compareNumbers
-        compareNumbers(input.value, correctNumber)
+    const newResults = compareNumbers(userGuess, correctNumber);
     //guess too high or low? display message, decriment score
-        //no tries? display lose message and diable game
+        //too low
+        if (newResults = -1) {
+            remainCount--
+            //display message, change view
+            }
+        //too high
+        if (newResults = 1) {
+            remainCount--
+            //display message, change view
+        }
+        if (remainCount = 0) {
+            //lose game message and disable game
+        }
+        if (newResults = 0) {
+            //display win message and end the game
+        }
+        }
     
-    //correct? display message and disable game
+    
+
 
 
 });

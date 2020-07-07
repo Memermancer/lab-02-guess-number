@@ -1,4 +1,4 @@
-export function compareNumbers(guess, correctNumber) {
+export default function compareNumbers(guess, correctNumber) {
     if (guess === correctNumber) {
         
         //winner
