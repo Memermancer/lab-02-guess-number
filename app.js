@@ -24,7 +24,7 @@ button.addEventListener('click', () => {
         //too low
     if (newResults === -1) {
         remainCount--;
-            //display message, change view
+        //display message, change view
         triesRemaining.textContent = (`${remainCount} tries remaining.`);
         guessWas.textContent = `Your guess was too low.`;
     }
@@ -33,7 +33,7 @@ button.addEventListener('click', () => {
         remainCount--;
         triesRemaining.textContent = (`${remainCount} tries remaining.`);
         guessWas.textContent = `Your guess was too high.`;
-            //display message, change view
+        //display message, change view
     }
     if (remainCount === 0) {
         winLose.textContent = 'You Lose!';
