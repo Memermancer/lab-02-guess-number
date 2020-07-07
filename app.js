@@ -6,6 +6,7 @@ const button = document.getElementById('submit-button');
 const triesRemaining = document.getElementById('tries-remaining');
 const winLose = document.getElementById('win-lose');
 const guessWas = document.getElementById('guess-was');
+const resetButton = document.getElementById('reset');
 //const hide = document.getElementById('hideMe');
 
 //initialize state
@@ -46,3 +47,14 @@ button.addEventListener('click', () => {
         document.getElementById('hideMe').style.visibility = 'hidden';
     }
 });
+
+const resetPage = () => {
+    const userChoice = window.confirm('Reset?');
+
+    if (userChoice === true) {
+        document.location.reload();
+    } else {
+        return false;
+    }
+};
+resetButton.addEventListener('click', resetPage);
